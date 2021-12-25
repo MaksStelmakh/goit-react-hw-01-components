@@ -1,5 +1,7 @@
 import Profile from "../Profile/Profile"
+import Statistics from "../Statistics/Statistics"
 import user from "../Profile/user.json"
+import data from "../Statistics/data.json"
 
 export default function App() { 
     return <div>
@@ -8,10 +10,13 @@ export default function App() {
             tag={user.tag}
             location={user.location}
             avatar={user.avatar}
-            followers={user.stats.followers}
-            views={user.stats.views}
-            likes={user.stats.likes}
+            stats={user.stats}
         />
+
+        {/* <Statistics
+            label={data.label}
+            percentage={data.percentage}
+        /> */}
     </div>
 }
 
