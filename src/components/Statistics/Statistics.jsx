@@ -1,27 +1,12 @@
-// import PropTypes from "prop-types"
+// import PropTypes from "prop-types";
+import ListInfo from "./listInfo/ListInfo";
+import { Section, Title } from "./Statistics.styled";
 
-// export default function Profile({ label, percentage }) { 
-//     return <section class="statistics">
-//   <h2 class="title">Upload stats</h2>
-
-//   <ul class="stat-list">
-//     <li class="item">
-//       <span class="label">.docx</span>
-//       <span class="percentage">4%</span>
-//     </li>
-//     <li class="item">
-//       <span class="label">.mp3</span>
-//       <span class="percentage">14%</span>
-//     </li>
-//     <li class="item">
-//       <span class="label">.pdf</span>
-//       <span class="percentage">41%</span>
-//     </li>
-//     <li class="item">
-//       <span class="label">.mp4</span>
-//       <span class="percentage">12%</span>
-//     </li>
-//   </ul>
-// </section>
-// }
-
+export default function Profile({ info }) {
+  return (
+    <Section>
+      <Title>Upload stats</Title>
+      <ListInfo data={info} />
+    </Section>
+  );
+}

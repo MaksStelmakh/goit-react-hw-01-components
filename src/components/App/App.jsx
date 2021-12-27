@@ -1,22 +1,24 @@
-import Profile from "../Profile/Profile"
-import Statistics from "../Statistics/Statistics"
-import user from "../Profile/user.json"
-import data from "../Statistics/data.json"
+import Profile from "../profile/Profile";
+import Statistics from "../statistics/Statistics";
+import FriendList from "../friendList/FriendList";
+import user from "../profile/user.json";
+import data from "../statistics/data.json";
+import friends from "../friendList/friends.json";
 
-export default function App() { 
-    return <div>
-        <Profile
-            username={user.username}
-            tag={user.tag}
-            location={user.location}
-            avatar={user.avatar}
-            stats={user.stats}
-        />
+export default function App() {
+  return (
+    <>
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
 
-        {/* <Statistics
-            label={data.label}
-            percentage={data.percentage}
-        /> */}
-    </div>
+      <Statistics info={data} />
+
+      <FriendList data={friends} />
+    </>
+  );
 }
-
