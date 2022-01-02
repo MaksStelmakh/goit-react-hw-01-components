@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   Section,
   Elements,
@@ -33,3 +34,14 @@ export default function FriendList({ data }) {
     </Section>
   );
 }
+
+FriendList.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ),
+};
