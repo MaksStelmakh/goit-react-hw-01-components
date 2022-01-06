@@ -25,7 +25,7 @@ export default function ListInfo({ data }) {
 }
 
 ListInfo.propTypes = {
-  info: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
